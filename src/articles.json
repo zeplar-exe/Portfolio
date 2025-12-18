@@ -1,22 +1,22 @@
 [
     {
-        "name": "Test Internal Article",
-        "description": "This is a test article description.",
+        "name": "GaaLE, a Postmortem",
+        "description": "GaaLE (Godot as a Level Editor) was an experimental personal project that explored the potential use of Godot engine as a level editor, rather than a full game engine. Here, I detail the development process and its effective utility, both in relation to my intended use case and broader applications.",
+        "featured": false,
+        "last_updated": "2025-12-17",
+        "link": {
+            "type": "internal",
+            "url": "articles/gaale-postmortem.md"
+        }
+    },
+    {
+        "name": "A Study on Temporal EEG Interconnection",
+        "description": "In this independent research project, I explore the statistics of temporal EEG signal connectivity to develop a better understanding of how different regions of the brain communicate.",
         "featured": true,
         "last_updated": "2025-12-17",
         "link": {
             "type": "internal",
-            "url": "test-article.md"
-        }
-    },
-    {
-        "name": "Test External Article",
-        "description": "This is a test article description.",
-        "featured": false,
-        "last_updated": "2025-12-10",
-        "link": {
-            "type": "external",
-            "url": "https://blog.damienjburks.com/prevention-first-cloud-security-escaping-alert-fatigue-for-good-using-turbot"
+            "url": "articles/eeg-interconnection.md"
         }
     }
 ]

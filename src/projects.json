@@ -1,18 +1,83 @@
 [
     {
-        "name": "Test Project",
+        "name": "NeuroNet",
         "description": "This is a test project description.",
         "featured": true,
         "last_updated": "2025-12-17",
         "link": {
             "type": "internal",
-            "url": "test-project.md"
+            "url": "projects/neuronet.md"
         },
         "hosts": {
-            "github": "https://github.com/zeplar-exe"
+            "github": "https://github.com/zeplar-exe/neuronet"
         },
         "gallery": [
 
         ]
+    },
+    {
+        "name": "NaturalRegex",
+        "description": "This is a test external project description.",
+        "featured": false,
+        "last_updated": "2025-12-17",
+        "link": {
+            "type": "internal",
+            "url": "projects/natreg.md"
+        },
+        "hosts": {
+            "github": "https://github.com/zeplar-exe/naturalregex"
+        }
+    },
+    {
+        "name": "FsTag",
+        "description": "This is a test external project description.",
+        "featured": false,
+        "last_updated": "2025-12-17",
+        "link": {
+            "type": "internal",
+            "url": "projects/fstag.md"
+        },
+        "hosts": {
+            "github": "https://github.com/zeplar-exe/fstag"
+        }
+    },
+    {
+        "name": "MacroMat",
+        "description": "This is a test external project description.",
+        "featured": false,
+        "last_updated": "2025-12-17",
+        "link": {
+            "type": "internal",
+            "url": "projects/macromat.md"
+        },
+        "hosts": {
+            "github": "https://github.com/zeplar-exe/macromat"
+        }
+    },
+    {
+        "name": "BinSpec",
+        "description": "This is a test external project description.",
+        "featured": false,
+        "last_updated": "2025-12-17",
+        "link": {
+            "type": "internal",
+            "url": "projects/binspec.md"
+        },
+        "hosts": {
+            "github": "https://github.com/zeplar-exe/binspec"
+        }
+    },
+    {
+        "name": "PileRef",
+        "description": "This is a test external project description.",
+        "featured": false,
+        "last_updated": "2025-12-17",
+        "link": {
+            "type": "internal",
+            "url": "projects/pileref.md"
+        },
+        "hosts": {
+            "github": "https://github.com/zeplar-exe/pileref"
+        }
     }
 ]

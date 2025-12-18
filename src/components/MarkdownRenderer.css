@@ -112,3 +112,69 @@
   text-align: left;
   margin-top: 1em;
 }
+
+/* Footnotes */
+.markdown-content .footnotes {
+  margin-top: 3em;
+  padding-top: 1em;
+  border-top: 1px solid #404040;
+  font-size: 0.9em;
+}
+
+.markdown-content .footnotes hr {
+  display: none;
+}
+
+.markdown-content .footnotes ol {
+  padding-left: 1.5em;
+}
+
+.markdown-content .footnotes li {
+  margin: 0.8em 0;
+}
+
+.markdown-content .footnote-ref {
+  color: #4a9eff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.markdown-content .footnote-ref:hover {
+  text-decoration: underline;
+}
+
+.markdown-content .footnote-backref {
+  margin-left: 0.5em;
+  color: #4a9eff;
+  text-decoration: none;
+}
+
+.markdown-content .footnote-backref:hover {
+  text-decoration: underline;
+}
+
+/* KaTeX Math Rendering */
+.markdown-content .katex {
+  font-size: 1.1em;
+}
+
+.markdown-content .katex-display {
+  margin: 1.5em 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.markdown-content .katex-display > .katex {
+  text-align: center;
+}
+
+/* Math in dark mode */
+.markdown-content .katex .mord,
+.markdown-content .katex .mop,
+.markdown-content .katex .mbin,
+.markdown-content .katex .mrel,
+.markdown-content .katex .mopen,
+.markdown-content .katex .mclose,
+.markdown-content .katex .mpunct {
+  color: #e0e0e0;
+}

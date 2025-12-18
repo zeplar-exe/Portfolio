@@ -1,0 +1,131 @@
+/* Table of Contents */
+.table-of-contents {
+  position: sticky;
+  top: 100px;
+  width: 250px;
+  height: fit-content;
+  flex-shrink: 0;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 1.5rem;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+.table-of-contents::-webkit-scrollbar {
+  width: 6px;
+}
+
+.table-of-contents::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.table-of-contents::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+
+.table-of-contents::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+
+.table-of-contents h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 1rem 0;
+}
+
+.table-of-contents nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.table-of-contents nav li {
+  padding: 0;
+}
+
+.table-of-contents nav a {
+  display: block;
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  color: #666;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+  border-left: 2px solid transparent;
+}
+
+.table-of-contents nav a:hover {
+  background-color: rgba(100, 108, 255, 0.1);
+  color: #646cff;
+}
+
+.table-of-contents nav li.active a {
+  background-color: rgba(100, 108, 255, 0.15);
+  color: #646cff;
+  border-left-color: #646cff;
+  font-weight: 500;
+}
+
+.toc-level-1 {
+  padding-left: 0;
+}
+
+.toc-level-2 {
+  padding-left: 0.75rem;
+}
+
+.toc-level-2 a {
+  font-size: 0.85rem;
+}
+
+.toc-level-3 {
+  padding-left: 1.5rem;
+}
+
+.toc-level-3 a {
+  font-size: 0.8rem;
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  .table-of-contents {
+    background-color: #2a2a2a;
+  }
+
+  .table-of-contents h2 {
+    color: #e0e0e0;
+  }
+
+  .table-of-contents nav a {
+    color: #a0a0a0;
+  }
+
+  .table-of-contents nav a:hover {
+    background-color: rgba(116, 123, 255, 0.15);
+    color: #747bff;
+  }
+
+  .table-of-contents nav li.active a {
+    background-color: rgba(116, 123, 255, 0.2);
+    color: #747bff;
+    border-left-color: #747bff;
+  }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .table-of-contents {
+    position: relative;
+    top: 0;
+    width: 100%;
+    max-height: 400px;
+  }
+}

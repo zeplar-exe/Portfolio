@@ -1,6 +1,8 @@
 import { Link, useLocation } from 'react-router-dom'
 import { useState, useEffect, useRef } from 'react'
 import { MarkdownRenderer } from './MarkdownRenderer'
+import { TableOfContents } from './TableOfContents'
+import { useTableOfContents } from '../hooks/useTableOfContents'
 import './MarkdownRenderer.css'
 import articlesData from '../articles.json'
 import contentData from '../content.json'
@@ -12,6 +14,7 @@ const ArticleView = () => {
   const [mdUrl, setMdUrl] = useState<string>('')
   const contentRef = useRef<HTMLDivElement>(null)
   const textContent = contentData.articleView
+  const { headers, activeSection, scrollToSection } = useTableOfContents(mdUrl)
   
   // Extract the filename from the path
   const filename = location.pathname.replace('/articles/', '')
@@ -23,8 +26,8 @@ const ArticleView = () => {
   useEffect(() => {
     if (article && article.link.type === 'internal') {
       const baseUrl = import.meta.env.BASE_URL || '/'
-      // Just set the URL, the MarkdownRenderer will fetch it
-      setMdUrl(`${baseUrl}${article.link.url}`)
+      const url = `${baseUrl}${article.link.url}`
+      setMdUrl(url)
     }
   }, [article])
 
@@ -41,13 +44,19 @@ const ArticleView = () => {
 
   return (
     <div className="article-view">
-      <div className="article-header">
+      <div className="article-view-header">
         <Link to="/articles" className="back-link">{textContent.backLinkText}</Link>
-        <h1 className="article-title">{article.name}</h1>
+        <h1 className="article-view-title">{article.name}</h1>
       </div>
 
-      <div className="article-content-wrapper">
-        <div className="article-content" ref={contentRef}>
+      <div className="article-view-content-wrapper">
+        <TableOfContents 
+          headers={headers} 
+          activeSection={activeSection} 
+          onNavigate={scrollToSection} 
+        />
+        
+        <div className="article-view-content" ref={contentRef}>
           {mdUrl ? (
             <div className="markdown-content-wrapper">
               <MarkdownRenderer mdUrl={mdUrl} />
