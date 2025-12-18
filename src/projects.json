@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Test Project",
+        "description": "This is a test project description.",
+        "featured": true,
+        "link": {
+            "type": "internal",
+            "url": "content/test-project.tex"
+        },
+        "hosts": {
+            "github": "https://github.com/zeplar-exe"
+        },
+        "gallery": [
+
+        ]
+    }
+]

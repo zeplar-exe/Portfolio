@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Test Internal Article",
+        "description": "This is a test article description.",
+        "featured": true,
+        "link": {
+            "type": "internal",
+            "url": "test-article.tex"
+        }
+    },
+    {
+        "name": "Test External Article",
+        "description": "This is a test article description.",
+        "featured": true,
+        "link": {
+            "type": "external",
+            "url": "https://blog.damienjburks.com/prevention-first-cloud-security-escaping-alert-fatigue-for-good-using-turbot"
+        }
+    }
+]
