@@ -25,7 +25,7 @@
 
 .project-view-title {
   font-size: 1.4rem;
-  color: white;
+  color: #1a1a1a;
   margin: 0;
   text-align: center;
 }
@@ -145,6 +145,7 @@
   }
 
   .project-title,
+  .project-view-title
   .gallery-title,
   .not-found h1 {
     color: #e0e0e0;

@@ -12,6 +12,9 @@
   overflow-x: hidden;
   scroll-behavior: smooth;
   box-sizing: border-box;
+  position: sticky;
+  top: calc(60px + 2rem); /* Header height (~60px) + gap (2rem) */
+  max-height: calc(100vh - 60px - 4rem); /* Account for header and gaps */
 }
 
 .table-of-contents::-webkit-scrollbar {
@@ -168,5 +171,6 @@
     min-width: 100% !important;
     flex: 0 0 auto !important; /* Don't force height, let it fit content */
     max-height: 400px;
+    position: static; /* Disable sticky on mobile */
   }
 }
