@@ -5,8 +5,17 @@ import { type Article } from '../types/content'
 import './Articles.css'
 
 const Articles = () => {
-  const articles = articlesData as Article[]
   const content = contentData.articles
+  
+  // Sort articles: featured first, then by last_updated (most recent first)
+  const articles = (articlesData as Article[]).sort((a, b) => {
+    // Featured items come first
+    if (a.featured !== b.featured) {
+      return a.featured ? -1 : 1
+    }
+    // Then sort by last_updated (most recent first)
+    return new Date(b.last_updated).getTime() - new Date(a.last_updated).getTime()
+  })
 
   const getArticleLink = (article: Article) => {
     if (article.link.type === 'external') {

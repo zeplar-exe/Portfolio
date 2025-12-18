@@ -5,8 +5,17 @@ import { type Project } from '../types/content'
 import './Projects.css'
 
 const Projects = () => {
-  const projects = projectsData as Project[]
   const content = contentData.projects
+  
+  // Sort projects: featured first, then by last_updated (most recent first)
+  const projects = (projectsData as Project[]).sort((a, b) => {
+    // Featured items come first
+    if (a.featured !== b.featured) {
+      return a.featured ? -1 : 1
+    }
+    // Then sort by last_updated (most recent first)
+    return new Date(b.last_updated).getTime() - new Date(a.last_updated).getTime()
+  })
 
   const getProjectLink = (project: Project) => {
     if (project.link.type === 'external') {
