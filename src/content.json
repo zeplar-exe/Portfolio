@@ -1,0 +1,52 @@
+{
+  "summary": {
+    "profileImage": "/profile.jpg",
+    "blurb": "Welcome to My Portfolio",
+    "subtext": "I'm a passionate developer with expertise in creating modern web applications. My focus is on building intuitive, performant, and accessible user experiences using the latest technologies. Through my work, I strive to solve real-world problems and deliver solutions that make a difference.",
+    "featuredProjects": {
+      "heading": "Featured Projects",
+      "linkText": "Learn More →",
+      "viewAllText": "View All Projects →"
+    },
+    "featuredArticles": {
+      "heading": "Featured Articles",
+      "linkText": "Read More →",
+      "viewAllText": "View All Articles →"
+    },
+    "contact": {
+      "heading": "Get In Touch",
+      "description": "I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.",
+      "location": "Based in San Diego, CA",
+      "email": "baker.zanderh@gmail.com",
+      "emailButtonText": "Email Me",
+      "githubUrl": "https://github.com/zeplar-exe",
+      "githubButtonText": "GitHub",
+      "linkedinUrl": "https://linkedin.com/in/zandebak",
+      "linkedinButtonText": "LinkedIn"
+    }
+  },
+  "projects": {
+    "heading": "Projects",
+    "description": "Explore my portfolio of projects showcasing various technologies and solutions.",
+    "viewProjectText": "View Project →",
+    "githubButtonText": "GitHub",
+    "featuredBadgeText": "Featured"
+  },
+  "articles": {
+    "heading": "Articles",
+    "description": "Read my thoughts on technology, development, and industry insights.",
+    "readArticleText": "Read Article →",
+    "featuredBadgeText": "Featured"
+  },
+  "projectView": {
+    "backLinkText": "← Back to Projects",
+    "notFoundHeading": "Project Not Found",
+    "githubButtonText": "View on GitHub",
+    "tocHeading": "Table of Contents"
+  },
+  "articleView": {
+    "backLinkText": "← Back to Articles",
+    "notFoundHeading": "Article Not Found",
+    "tocHeading": "Table of Contents"
+  }
+}

@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from 'react'
 import Latex from 'react-latex-next'
 import 'katex/dist/katex.min.css'
 import articlesData from '../articles.json'
+import contentData from '../content.json'
 import { type Article } from '../types/content'
 import './ArticleView.css'
 
@@ -11,6 +12,7 @@ const ArticleView = () => {
   const [content, setContent] = useState<string>('')
   const [activeSection, setActiveSection] = useState<string>('')
   const contentRef = useRef<HTMLDivElement>(null)
+  const textContent = contentData.articleView
   
   // Extract the filename from the path
   const filename = location.pathname.replace('/articles/', '')
@@ -98,8 +100,8 @@ const ArticleView = () => {
     return (
       <div className="article-view">
         <div className="not-found">
-          <h1>Article Not Found</h1>
-          <Link to="/articles" className="back-link">← Back to Articles</Link>
+          <h1>{textContent.notFoundHeading}</h1>
+          <Link to="/articles" className="back-link">{textContent.backLinkText}</Link>
         </div>
       </div>
     )
@@ -108,14 +110,14 @@ const ArticleView = () => {
   return (
     <div className="article-view">
       <div className="article-header">
-        <Link to="/articles" className="back-link">← Back to Articles</Link>
+        <Link to="/articles" className="back-link">{textContent.backLinkText}</Link>
         <h1 className="article-title">{article.name}</h1>
       </div>
 
       <div className="article-content-wrapper">
         {headers.length > 0 && (
           <aside className="toc">
-            <h3 className="toc-title">Table of Contents</h3>
+            <h3 className="toc-title">{textContent.tocHeading}</h3>
             <nav className="toc-nav">
               {headers.map((header) => (
                 <button

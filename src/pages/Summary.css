@@ -40,7 +40,7 @@
   line-height: 1.8;
   color: #666;
   margin: 0;
-  text-align: left;
+  text-align: center;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -175,6 +175,7 @@
 
 .contact-description {
   font-size: 1.1rem;
+  text-align: center;
   line-height: 1.6;
   color: #666;
   margin-bottom: 1.5rem;
