@@ -3,9 +3,7 @@ name: Build Preview (In-Progress)
 on:
   push:
     branches:
-      - dev
-      - development
-      - in-progress
+      - draft
   pull_request:
     branches:
       - main
