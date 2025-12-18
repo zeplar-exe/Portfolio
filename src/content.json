@@ -1,6 +1,6 @@
 {
   "summary": {
-    "profileImage": "/profile.jpg",
+    "profileImage": "profile.jpg",
     "blurb": "Welcome to My Portfolio",
     "subtext": "I'm a passionate developer with expertise in creating modern web applications. My focus is on building intuitive, performant, and accessible user experiences using the latest technologies. Through my work, I strive to solve real-world problems and deliver solutions that make a difference.",
     "featuredProjects": {

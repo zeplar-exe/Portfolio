@@ -31,7 +31,7 @@ const Summary = () => {
     <section id="summary" className="summary-page">
       <div className="summary-container">
         <img 
-          src={content.profileImage}
+          src={`${import.meta.env.BASE_URL}${content.profileImage}`}
           alt="Profile" 
           className="summary-image"
         />
