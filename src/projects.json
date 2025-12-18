@@ -5,7 +5,7 @@
         "featured": true,
         "link": {
             "type": "internal",
-            "url": "content/test-project.tex"
+            "url": "test-project.tex"
         },
         "hosts": {
             "github": "https://github.com/zeplar-exe"

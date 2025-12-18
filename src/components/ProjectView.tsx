@@ -23,8 +23,14 @@ const ProjectView = () => {
 
   useEffect(() => {
     if (project && project.link.type === 'internal') {
-      fetch(`/${project.link.url}`)
-        .then(res => res.text())
+      const baseUrl = import.meta.env.BASE_URL || '/'
+      fetch(`${baseUrl}${project.link.url}`)
+        .then(res => {
+          if (!res.ok) {
+            throw new Error(`HTTP error! status: ${res.status}`)
+          }
+          return res.text()
+        })
         .then(text => setContent(text))
         .catch(err => console.error('Error loading content:', err))
     }
@@ -66,16 +72,6 @@ const ProjectView = () => {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [headers])
-
-  // Auto-scroll TOC to keep active item visible
-  useEffect(() => {
-    if (activeSection) {
-      const activeButton = document.querySelector(`.toc-item[data-section="${activeSection}"]`)
-      if (activeButton) {
-        activeButton.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
-      }
-    }
-  }, [activeSection])
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id)
