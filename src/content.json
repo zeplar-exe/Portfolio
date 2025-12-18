@@ -1,8 +1,8 @@
 {
   "summary": {
     "profileImage": "profile.jpg",
-    "blurb": "Welcome to My Portfolio",
-    "subtext": "I'm a passionate developer with expertise in creating modern web applications. My focus is on building intuitive, performant, and accessible user experiences using the latest technologies. Through my work, I strive to solve real-world problems and deliver solutions that make a difference.",
+    "blurb": "Aspiring Computational Neuroscientist & Bioinformatics Specialist",
+    "subtext": "I'm an undergraduate Computer Science + Cognitive Science major pursuing a career in research, combining Computational Neuroscience and Bioinformatics. I have demonstrated efficiency in general **programming/software development**, **data analysis**, and **machine learning** applications. I am assionate about leveraging technology for sustainable solutions and advancing computational modelling.",
     "featuredProjects": {
       "heading": "Featured Projects",
       "linkText": "Learn More →",
@@ -14,8 +14,8 @@
       "viewAllText": "View All Articles →"
     },
     "contact": {
-      "heading": "Get In Touch",
-      "description": "I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.",
+      "heading": "Contact",
+      "description": "I'm open to discussing new projects, creative ideas, or opportunities to be part of your vision.",
       "location": "Based in San Diego, CA",
       "email": "baker.zanderh@gmail.com",
       "emailButtonText": "Email Me",
@@ -27,14 +27,14 @@
   },
   "projects": {
     "heading": "Projects",
-    "description": "Explore my portfolio of projects showcasing various technologies and solutions.",
+    "description": "Explore my portfolio of projects.",
     "viewProjectText": "View Project →",
     "githubButtonText": "GitHub",
     "featuredBadgeText": "Featured"
   },
   "articles": {
     "heading": "Articles",
-    "description": "Read my thoughts on technology, development, and industry insights.",
+    "description": "Read my tutorials, thoughts on technology, and explanations of personal methods.",
     "readArticleText": "Read Article →",
     "featuredBadgeText": "Featured"
   },

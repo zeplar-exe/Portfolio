@@ -5,7 +5,7 @@
         "featured": true,
         "link": {
             "type": "internal",
-            "url": "test-article.tex"
+            "url": "test-article.md"
         }
     },
     {

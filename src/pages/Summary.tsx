@@ -13,6 +13,17 @@ const Summary = () => {
   const featuredProjects = projects.filter(p => p.featured).slice(0, 3)
   const featuredArticles = articles.filter(a => a.featured).slice(0, 3)
 
+  // Parse text formatting: **bold**, *italic*, __underline__
+  const parseFormatting = (text: string) => {
+    // Replace **text** with <strong>text</strong>
+    let parsed = text.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+    // Replace *text* with <em>text</em>
+    parsed = parsed.replace(/\*([^*]+)\*/g, '<em>$1</em>')
+    // Replace __text__ with <u>text</u>
+    parsed = parsed.replace(/__([^_]+)__/g, '<u>$1</u>')
+    return parsed
+  }
+
   const getProjectLink = (project: Project) => {
     if (project.link.type === 'external') {
       return project.link.url
@@ -36,9 +47,10 @@ const Summary = () => {
           className="summary-image"
         />
         <h1 className="summary-blurb">{content.blurb}</h1>
-        <p className="summary-subtext">
-          {content.subtext}
-        </p>
+        <p 
+          className="summary-subtext"
+          dangerouslySetInnerHTML={{ __html: parseFormatting(content.subtext) }}
+        />
       </div>
 
       {/* Featured Projects Section */}
