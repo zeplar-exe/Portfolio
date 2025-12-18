@@ -9,7 +9,7 @@ import './App.css'
 
 function App() {
   return (
-    <Router>
+    <Router basename="/Portfolio">
       <Layout>
         <Routes>
           <Route path="/" element={<Summary />} />
