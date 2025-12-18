@@ -59,12 +59,26 @@
   display: flex;
   gap: 2rem;
   position: relative;
+  align-items: flex-start;
 }
 
 /* Main Content */
 .project-content {
-  flex: 1;
+  flex: 1 1 auto;
   min-width: 0;
+  max-width: 100%;
+}
+
+/* Responsive - stack vertically on smaller screens */
+@media (max-width: 1024px) {
+  .project-view-content-wrapper {
+    flex-direction: column; /* Stack TOC above content */
+    gap: 1.5rem;
+  }
+  
+  .project-content {
+    width: 100%;
+  }
 }
 
 .latex-content {

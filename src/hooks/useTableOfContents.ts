@@ -56,6 +56,8 @@ export const useTableOfContents = (mdUrl: string) => {
     const element = document.getElementById(id)
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      // Update active section immediately for better UX
+      setActiveSection(id)
     }
   }
 

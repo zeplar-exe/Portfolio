@@ -14,7 +14,7 @@ The rationale behind this selection was to 1) utilize a vast, relatively random 
 
 ### EEG Data Extraction and Processing
 
-The extraction script was written in Python 3.XX and used the mne library to parse EEG-containing files (principally .edf). From here, for each channel combination (2 channels, A and B), across several lag positions, the perason coefficient (via scipy) between A and B's signals is calculated across the entire timeframe. Lag positions here refer to the relative offset between a datapoint in channel A and channel B. For example, given a lag of 5, B's signals are shifted 5 to the left, and the last 5 signals of A are discarded. These modified vectors are then fed into the pearson function. For our purposes, we processed the EEG with a maximum lag of 30 (equivalent to ~188ms with a standard 160hz EEG input).
+The extraction script was written in Python 3.XX and used the mne library to parse EEG-containing files (principally .edf). From here, for each channel combination (2 channels, A and B), across several lag positions, the perason coefficient (via scipy) between A and B's signals is calculated across the entire timeframe. Lag positions here refer to the relative offset between a datapoint in channel A and channel B. For example, given a lag of 5, B's signals are shifted 5 to the left, and the last 5 signals of A are discarded. These modified vectors are then fed into the correlation function. For our purposes, we processed the EEG with a maximum lag of 30 (equivalent to ~188ms with a standard 160hz EEG input).
 
 ### Comparison of Connectivity Algorithms
 
@@ -23,8 +23,6 @@ The extraction script was written in Python 3.XX and used the mne library to par
 ### Results
 
 ### Consistency with Existing Data
-
-### References
 
 [^1] Goldberger, A., Amaral, L., Glass, L., Hausdorff, J., Ivanov, P. C., Mark, R., ... & Stanley, H. E. (2000). PhysioBank, PhysioToolkit, and PhysioNet: Components of a new research resource for complex physiologic signals. Circulation [Online]. 101 (23), pp. e215–e220. RRID:SCR_007345.
 
