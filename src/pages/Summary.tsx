@@ -10,8 +10,8 @@ const Summary = () => {
   const articles = articlesData as Article[]
   const content = contentData.summary
   
-  const featuredProjects = projects.filter(p => p.featured).slice(0, 3)
-  const featuredArticles = articles.filter(a => a.featured).slice(0, 3)
+  const featuredProjects = projects.filter(p => p.featured && !p.archived).slice(0, 3)
+  const featuredArticles = articles.filter(a => a.featured && !a.archived).slice(0, 3)
 
   // Parse text formatting: **bold**, *italic*, __underline__
   const parseFormatting = (text: string) => {

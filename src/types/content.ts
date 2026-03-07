@@ -8,6 +8,7 @@ export interface Project {
   description: string
   featured: boolean
   last_updated: string
+  archived?: boolean
   link: Link
   hosts: {
     github?: string
@@ -21,5 +22,6 @@ export interface Article {
   description: string
   featured: boolean
   last_updated: string
+  archived?: boolean
   link: Link
 }

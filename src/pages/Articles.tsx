@@ -7,8 +7,7 @@ import './Articles.css'
 const Articles = () => {
   const content = contentData.articles
   
-  // Sort articles: featured first, then by last_updated (most recent first)
-  const articles = (articlesData as Article[]).sort((a, b) => {
+  const sortArticles = (items: Article[]) => items.sort((a, b) => {
     // Featured items come first
     if (a.featured !== b.featured) {
       return a.featured ? -1 : 1
@@ -16,6 +15,10 @@ const Articles = () => {
     // Then sort by last_updated (most recent first)
     return new Date(b.last_updated).getTime() - new Date(a.last_updated).getTime()
   })
+
+  const allArticles = articlesData as Article[]
+  const activeArticles = sortArticles(allArticles.filter((article) => !article.archived))
+  const archivedArticles = sortArticles(allArticles.filter((article) => article.archived))
 
   const getArticleLink = (article: Article) => {
     if (article.link.type === 'external') {
@@ -32,7 +35,7 @@ const Articles = () => {
       </p>
       
       <div className="articles-grid">
-        {articles.map((article, index) => (
+        {activeArticles.map((article, index) => (
           <div key={index} className="article-card">
             <div className="article-header">
               <h3 className="article-title">{article.name}</h3>
@@ -59,6 +62,40 @@ const Articles = () => {
           </div>
         ))}
       </div>
+
+      {archivedArticles.length > 0 && (
+        <section className="archived-section">
+          <h3 className="archived-heading">ARCHIVED</h3>
+          <div className="articles-grid archived-grid">
+            {archivedArticles.map((article, index) => (
+              <div key={`archived-${index}`} className="article-card">
+                <div className="article-header">
+                  <h3 className="article-title">{article.name}</h3>
+                  {article.featured && <span className="featured-badge">{content.featuredBadgeText}</span>}
+                </div>
+                <p className="article-description">{article.description}</p>
+
+                <div className="article-links">
+                  {article.link.type === 'external' ? (
+                    <a 
+                      href={article.link.url} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="article-link"
+                    >
+                      {content.readArticleText}
+                    </a>
+                  ) : (
+                    <Link to={getArticleLink(article)} className="article-link">
+                      {content.readArticleText}
+                    </Link>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
     </section>
   )
 }

@@ -1,22 +1,22 @@
 [
     {
-        "name": "GaaLE, a Postmortem",
-        "description": "GaaLE (Godot as a Level Editor) was an experimental personal project that explored the potential use of Godot engine as a level editor, rather than a full game engine. Here, I detail the development process and its effective utility, both in relation to my intended use case and broader applications.",
-        "featured": false,
-        "last_updated": "2025-12-17",
-        "link": {
-            "type": "internal",
-            "url": "articles/gaale-postmortem.md"
-        }
-    },
-    {
         "name": "A Study on Temporal EEG Interconnection",
         "description": "In this independent research project, I explore the statistics of temporal EEG signal connectivity to develop a better understanding of how different regions of the brain communicate.",
         "featured": true,
-        "last_updated": "2025-12-17",
+        "last_updated": "2025-12-18",
         "link": {
             "type": "internal",
             "url": "articles/eeg-interconnection.md"
+        }
+    },
+    {
+        "name": "A Contemporary Review of Neural Ensembles",
+        "description": "This bibliometric analysis focuses on recent (2000-2025) research regarding neural ensembles to summarize our understanding of how groups of neurons coordinate to process information in the brain.",
+        "featured": false,
+        "last_updated": "2025-12-18",
+        "link": {
+            "type": "internal",
+            "url": "articles/neural-ensembles-bibliometrics.md"
         }
     }
 ]

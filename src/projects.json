@@ -1,8 +1,9 @@
 [
     {
         "name": "NeuroNet",
-        "description": "This is a test project description.",
+        "description": "NeuroNet is a web application for testing and experimenting with handmade neuron networks.",
         "featured": true,
+        "archived": false,
         "last_updated": "2025-12-17",
         "link": {
             "type": "internal",
@@ -11,14 +12,13 @@
         "hosts": {
             "github": "https://github.com/zeplar-exe/neuronet"
         },
-        "gallery": [
-
-        ]
+        "gallery": []
     },
     {
         "name": "NaturalRegex",
-        "description": "This is a test external project description.",
+        "description": "NaturalRegex is an experimental parser implementation to explore a more natural way of writing regular expressions.",
         "featured": false,
+        "archived": true,
         "last_updated": "2025-12-17",
         "link": {
             "type": "internal",
@@ -30,8 +30,9 @@
     },
     {
         "name": "FsTag",
-        "description": "This is a test external project description.",
+        "description": "FsTag is a file system tagging tool that allows users to organize and manage their files using custom tags.",
         "featured": false,
+        "archived": true,
         "last_updated": "2025-12-17",
         "link": {
             "type": "internal",
@@ -43,8 +44,9 @@
     },
     {
         "name": "MacroMat",
-        "description": "This is a test external project description.",
+        "description": "MacroMat is an attempt at creating a successor to AutoHotKey.",
         "featured": false,
+        "archived": true,
         "last_updated": "2025-12-17",
         "link": {
             "type": "internal",
@@ -56,8 +58,9 @@
     },
     {
         "name": "BinSpec",
-        "description": "This is a test external project description.",
+        "description": "BinSpec is a binary specification tool for defining and validating binary data structures.",
         "featured": false,
+        "archived": true,
         "last_updated": "2025-12-17",
         "link": {
             "type": "internal",
@@ -69,8 +72,9 @@
     },
     {
         "name": "PileRef",
-        "description": "This is a test external project description.",
+        "description": "PileRef is a productivity tool for managing and organizing \"piles\" of digital content efficiently. It was inspired by PureRef and expands upon its core concept beyond images and to digital documents in general.",
         "featured": false,
+        "archived": true,
         "last_updated": "2025-12-17",
         "link": {
             "type": "internal",
@@ -78,6 +82,35 @@
         },
         "hosts": {
             "github": "https://github.com/zeplar-exe/pileref"
+        }
+    },
+    {
+        "name": "Shardly",
+        "description": "Shardly is a web application designed to help writers organize and manage their writing projects through manageable pieces of content that can be easily rearranged and edited.",
+        "featured": false,
+        "archived": true,
+        "last_updated": "2025-12-18 ",
+        "link": {
+            "type": "internal",
+            "url": "projects/shardly.md"
+        },
+        "gallery": [
+            {
+                "type": "image",
+                "alt": "Shardly Homepage",
+                "url": "gallery/shardly/1.png"
+            }
+        ]
+    },
+    {
+        "name": "Discrete-Agent",
+        "description": "Discrete-Agent is a framework for building AI agents that use discrete instructions to complete tasks.",
+        "featured": false,
+        "archived": true,
+        "last_updated": "2025-12-18 ",
+        "link": {
+            "type": "internal",
+            "url": "projects/discrete-agent.md"
         }
     }
 ]

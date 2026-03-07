@@ -1,8 +1,8 @@
 {
   "summary": {
     "profileImage": "profile.jpg",
-    "blurb": "Aspiring Computational Neuroscientist & Bioinformatics Specialist",
-    "subtext": "I'm an undergraduate Computer Science + Cognitive Science major pursuing a career in research, combining Computational Neuroscience and Bioinformatics. I have demonstrated efficiency in general **programming/software development**, **data analysis**, and **machine learning** applications. I am assionate about leveraging technology for sustainable solutions and advancing computational modelling.",
+    "blurb": "Aspiring Computational Neuroscientist",
+    "subtext": "I'm an undergraduate Computer Science + Cognitive Science major pursuing a career in neuroscience and BCI research.",
     "featuredProjects": {
       "heading": "Featured Projects",
       "linkText": "Learn More →",
@@ -34,7 +34,7 @@
   },
   "articles": {
     "heading": "Articles",
-    "description": "Read my tutorials, thoughts on technology, and explanations of personal methods.",
+    "description": "Read my tutorials, papers, and thoughts on technology.",
     "readArticleText": "Read Article →",
     "featuredBadgeText": "Featured"
   },
