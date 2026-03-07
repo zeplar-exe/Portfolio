@@ -47,6 +47,9 @@ const ArticleView = () => {
       <div className="article-view-header">
         <Link to="/articles" className="back-link">{textContent.backLinkText}</Link>
         <h1 className="article-view-title">{article.name}</h1>
+        {article.archived && (
+          <span className="archived-badge">ARCHIVED</span>
+        )}
       </div>
 
       <div className="article-view-content-wrapper">

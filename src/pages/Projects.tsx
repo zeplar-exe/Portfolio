@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import projectsData from '../projects.json'
 import contentData from '../content.json'
@@ -26,6 +27,10 @@ const Projects = () => {
     }
     return `/projects/${project.link.url}`
   }
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'auto' })
+  }, [])
 
   return (
     <section id="projects" className="projects-page">
